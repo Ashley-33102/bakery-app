@@ -16,6 +16,13 @@ Presented in a grid layout for a filled and professional appearance.
 Learn about the bakery’s story, specialties, and years of service.
 Warm design with light brown cards, shadows, and readable text.
 
+## 🔗 Firebase Database
+Integrated with Firebase Firestore to store and fetch bakery item data in real-time.
+
+## 📱 APK Generation
+The app is compiled into an Android APK.
+Download https://expo.dev/accounts/ashley/projects/hiraapp/builds/e38c6f8d-479c 494b-a389-712d51543ec2
+
 ## 🎨 Color Palette
 
 Background: Cream White #FFF8F0
