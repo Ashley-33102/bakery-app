@@ -2,21 +2,21 @@
 
 **Cakes & Bakes** is a professional bakery mobile application built with React Native & Expo. It showcases a menu of bakery items, categories, and an About page with a warm, cream-and-brown theme. The app provides a user-friendly interface, professional card design, and an elegant layout for a smooth browsing experience.
 
-##🚀 Features
+## 🚀 Features
 
-🏠 Home Menu Page
+## 🏠 Home Menu Page
 Displays a large list of bakery items with name, price, and availability.
 Each item is shown in a professional card with shadows and rounded corners.
 
-🗂 Categories Page
+## 🗂 Categories Page
 Browse bakery items by categories such as Cakes, Pastries, Breads, Cookies, Muffins, and more.
 Presented in a grid layout for a filled and professional appearance.
 
-ℹ️ About Page
+## ℹ️ About Page
 Learn about the bakery’s story, specialties, and years of service.
 Warm design with light brown cards, shadows, and readable text.
 
-🎨 Color Palette
+## 🎨 Color Palette
 
 Background: Cream White #FFF8F0
 
