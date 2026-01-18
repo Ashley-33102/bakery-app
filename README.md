@@ -1,50 +1,37 @@
-# Welcome to your Expo app 👋
+Cakes & Bakes — Bakery App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A professional bakery mobile application built with React Native & Expo, showcasing a menu, categories, and About page. The app is designed with a warm brown & cream color palette, professional UI cards, shadows, and a user-friendly layout.
 
-## Get started
+Features
 
-1. Install dependencies
+Home Menu Page
 
-   ```bash
-   npm install
-   ```
+Displays a large list of bakery items.
 
-2. Start the app
+Shows item name, price, and availability.
 
-   ```bash
-   npx expo start
-   ```
+Professional card design with shadows and rounded corners.
 
-In the output, you'll find options to open the app in a
+Categories Page
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+Browse bakery items by categories (Cakes, Pastries, Breads, Cookies, etc.).
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+Grid layout for a filled, professional look.
 
-## Get a fresh project
+Consistent styling with home page.
 
-When you're ready, run:
+About Page
 
-```bash
-npm run reset-project
-```
+Bakery story, specialties, and years of service.
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+Warm, professional design with light brown cards and shadows.
 
-## Learn more
+Color Palette
 
-To learn more about developing your project with Expo, look at the following resources:
+Background: Cream White (#FFF8F0)
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+Cards: Light Brown (#D2B48C)
 
-## Join the community
+Text: Dark Brown (#5D4037) & Light Brown (#8D6E63)
 
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Shadow: Dark Brown (#5D4037)
