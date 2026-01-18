@@ -1,98 +1,98 @@
-import { Image } from 'expo-image';
-import { Platform, StyleSheet } from 'react-native';
+import { View, Text, FlatList, StatusBar } from "react-native";
 
-import { HelloWave } from '@/components/hello-wave';
-import ParallaxScrollView from '@/components/parallax-scroll-view';
-import { ThemedText } from '@/components/themed-text';
-import { ThemedView } from '@/components/themed-view';
-import { Link } from 'expo-router';
+// Bakery items
+const bakeryItems = [
+  { id: "1", name: "Chocolate Cake", price: 1800, available: true },
+  { id: "2", name: "Strawberry Pastry", price: 250, available: true },
+  { id: "3", name: "Garlic Bread", price: 350, available: false },
+  { id: "4", name: "Vanilla Cupcake", price: 150, available: true },
+  { id: "5", name: "Blueberry Muffin", price: 180, available: true },
+  { id: "6", name: "Croissant", price: 220, available: true },
+  { id: "7", name: "Cinnamon Roll", price: 200, available: false },
+  { id: "8", name: "Cheese Danish", price: 190, available: true },
+  { id: "9", name: "Brownie", price: 120, available: true },
+  { id: "10", name: "Macarons", price: 300, available: true },
+  { id: "11", name: "Banana Bread", price: 250, available: true },
+  { id: "12", name: "Red Velvet Cake", price: 2000, available: true },
+  { id: "13", name: "Lemon Tart", price: 280, available: true },
+  { id: "14", name: "Chocolate Chip Cookie", price: 100, available: true },
+  { id: "15", name: "Pecan Pie", price: 450, available: false },
+];
 
-export default function HomeScreen() {
+export default function BakeryMenu() {
   return (
-    <ParallaxScrollView
-      headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
-      headerImage={
-        <Image
-          source={require('@/assets/images/partial-react-logo.png')}
-          style={styles.reactLogo}
-        />
-      }>
-      <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Welcome!</ThemedText>
-        <HelloWave />
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 1: Try it</ThemedText>
-        <ThemedText>
-          Edit <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> to see changes.
-          Press{' '}
-          <ThemedText type="defaultSemiBold">
-            {Platform.select({
-              ios: 'cmd + d',
-              android: 'cmd + m',
-              web: 'F12',
-            })}
-          </ThemedText>{' '}
-          to open developer tools.
-        </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <Link href="/modal">
-          <Link.Trigger>
-            <ThemedText type="subtitle">Step 2: Explore</ThemedText>
-          </Link.Trigger>
-          <Link.Preview />
-          <Link.Menu>
-            <Link.MenuAction title="Action" icon="cube" onPress={() => alert('Action pressed')} />
-            <Link.MenuAction
-              title="Share"
-              icon="square.and.arrow.up"
-              onPress={() => alert('Share pressed')}
-            />
-            <Link.Menu title="More" icon="ellipsis">
-              <Link.MenuAction
-                title="Delete"
-                icon="trash"
-                destructive
-                onPress={() => alert('Delete pressed')}
-              />
-            </Link.Menu>
-          </Link.Menu>
-        </Link>
+    <View
+      style={{
+        flex: 1,
+        backgroundColor: "#FFF8F0", // cream white background
+        paddingTop: StatusBar.currentHeight || 40,
+      }}
+    >
+      {/* Custom Header */}
+      <View
+        style={{
+          padding: 16,
+          alignItems: "center",
+          marginBottom: 20,
+        }}
+      >
+        <Text
+          style={{
+            fontSize: 32,
+            fontStyle: "italic",
+            fontWeight: "bold",
+            color: "#5D4037", // dark brown
+          }}
+        >
+          Cakes & Bakes
+        </Text>
+        <Text style={{ fontSize: 16, color: "#8D6E63", marginTop: 4 }}>
+          Warm, freshly baked treats made with love!
+        </Text>
+      </View>
 
-        <ThemedText>
-          {`Tap the Explore tab to learn more about what's included in this starter app.`}
-        </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 3: Get a fresh start</ThemedText>
-        <ThemedText>
-          {`When you're ready, run `}
-          <ThemedText type="defaultSemiBold">npm run reset-project</ThemedText> to get a fresh{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> directory. This will move the current{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> to{' '}
-          <ThemedText type="defaultSemiBold">app-example</ThemedText>.
-        </ThemedText>
-      </ThemedView>
-    </ParallaxScrollView>
+      {/* Bakery Items */}
+      <FlatList
+        data={bakeryItems}
+        keyExtractor={(item) => item.id}
+        contentContainerStyle={{ paddingHorizontal: 16, paddingBottom: 16 }}
+        renderItem={({ item }) => (
+          <View
+            style={{
+              backgroundColor: "#D2B48C", // light brown card
+              padding: 20,
+              borderRadius: 16,
+              marginBottom: 16,
+              shadowColor: "#5D4037", // dark brown shadow
+              shadowOpacity: 0.3,
+              shadowOffset: { width: 0, height: 4 },
+              shadowRadius: 5,
+              elevation: 5, // Android shadow
+            }}
+          >
+            <Text
+              style={{
+                fontSize: 18,
+                fontWeight: "600",
+                fontStyle: "italic",
+                color: "#5D4037", // dark brown text
+              }}
+            >
+              {item.name}
+            </Text>
+            <Text style={{ color: "#5D4037", marginTop: 4 }}>Rs. {item.price}</Text>
+            <Text
+              style={{
+                color: item.available ? "#5D4037" : "#FFF",
+                marginTop: 4,
+                fontWeight: "bold",
+              }}
+            >
+              {item.available ? "Available" : "Out of Stock"}
+            </Text>
+          </View>
+        )}
+      />
+    </View>
   );
 }
-
-const styles = StyleSheet.create({
-  titleContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 8,
-  },
-  stepContainer: {
-    gap: 8,
-    marginBottom: 8,
-  },
-  reactLogo: {
-    height: 178,
-    width: 290,
-    bottom: 0,
-    left: 0,
-    position: 'absolute',
-  },
-});
