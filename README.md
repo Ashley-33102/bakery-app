@@ -1,37 +1,29 @@
-Cakes & Bakes — Bakery App
+# 🍰 Cakes & Bakes
 
-A professional bakery mobile application built with React Native & Expo, showcasing a menu, categories, and About page. The app is designed with a warm brown & cream color palette, professional UI cards, shadows, and a user-friendly layout.
+**Cakes & Bakes** is a professional bakery mobile application built with React Native & Expo. It showcases a menu of bakery items, categories, and an About page with a warm, cream-and-brown theme. The app provides a user-friendly interface, professional card design, and an elegant layout for a smooth browsing experience.
 
-Features
+##🚀 Features
 
-Home Menu Page
+🏠 Home Menu Page
+Displays a large list of bakery items with name, price, and availability.
+Each item is shown in a professional card with shadows and rounded corners.
 
-Displays a large list of bakery items.
+🗂 Categories Page
+Browse bakery items by categories such as Cakes, Pastries, Breads, Cookies, Muffins, and more.
+Presented in a grid layout for a filled and professional appearance.
 
-Shows item name, price, and availability.
+ℹ️ About Page
+Learn about the bakery’s story, specialties, and years of service.
+Warm design with light brown cards, shadows, and readable text.
 
-Professional card design with shadows and rounded corners.
+🎨 Color Palette
 
-Categories Page
+Background: Cream White #FFF8F0
 
-Browse bakery items by categories (Cakes, Pastries, Breads, Cookies, etc.).
+Cards: Light Brown #D2B48C
 
-Grid layout for a filled, professional look.
+Text Primary: Dark Brown #5D4037
 
-Consistent styling with home page.
+Text Secondary: Light Brown #8D6E63
 
-About Page
-
-Bakery story, specialties, and years of service.
-
-Warm, professional design with light brown cards and shadows.
-
-Color Palette
-
-Background: Cream White (#FFF8F0)
-
-Cards: Light Brown (#D2B48C)
-
-Text: Dark Brown (#5D4037) & Light Brown (#8D6E63)
-
-Shadow: Dark Brown (#5D4037)
+Shadow: Dark Brown #5D4037
